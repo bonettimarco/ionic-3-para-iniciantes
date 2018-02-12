@@ -6,6 +6,9 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+	
+	public nome_usuario:string = "Marco Bonetti";
+
 
   constructor(public navCtrl: NavController) {
 
