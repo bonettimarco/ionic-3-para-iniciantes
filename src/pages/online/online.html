@@ -6,4 +6,6 @@
     <ion-list>
       <ion-item nar-clear="" menu-close="" mg-click="player()">Play música</ion-item>
     </ion-list>
+	<img *ngIf="img" [src]="img" alt="">
+	<button ion-button block (click)="tirarFoto()">Tirar foto</button>
   </ion-content>

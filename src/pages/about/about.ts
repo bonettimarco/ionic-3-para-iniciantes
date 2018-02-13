@@ -17,8 +17,8 @@ export class AboutPage {
 		
 	}
 	
-	ionViewOidLoad() {
-		//this.somaDoisNumeros(10, 99);
+	ionViewDidLoad() {
+		this.somaDoisNumeros(10, 99);
 		
 	}
 	

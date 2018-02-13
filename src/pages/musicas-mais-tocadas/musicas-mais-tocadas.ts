@@ -11,15 +11,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-m-sicas-mais-tocadas',
-  templateUrl: 'm-sicas-mais-tocadas.html',
+  templateUrl: 'musicas-mais-tocadas.html',
 })
-export class MSicasMaisTocadasPage {
+export class MusicasMaisTocadasPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MSicasMaisTocadasPage');
+    console.log('ionViewDidLoad MusicasMaisTocadasPage');
   }
 
 }

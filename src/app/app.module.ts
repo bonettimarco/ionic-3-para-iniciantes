@@ -8,9 +8,14 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { IntroPageModule } from '../pages/intro/intro.module';
+import { OnlinePageModule } from '../pages/online/online.module';
+import { MusicasMaisTocadasPageModule } from '../pages/musicas-mais-tocadas/musicas-mais-tocadas.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule} from "@angular/http"
+import { PersonProvider } from '../providers/person/person';
+import { OperadorasProvider } from '../providers/operadoras/operadoras';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-	IntroPageModule
+	IntroPageModule, 
+	HttpModule,
+	OnlinePageModule,
+	MusicasMaisTocadasPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,7 +44,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PersonProvider,
+	OperadorasProvider
   ]
 })
 export class AppModule {}

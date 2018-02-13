@@ -9,10 +9,9 @@ import { OnlinePage } from './online';
   ],
   imports: [
     IonicPageModule.forChild(OnlinePage)
+  ],
+  exports: [
+	OnlinePage
   ]
 })
-export class OnlinePageModule {
-	
-
-	
-}
+export class OnlinePageModule {}

@@ -16,12 +16,28 @@
 <ion-content padding>
 <ion-slides pager>
 
-  <ion-slide style="background-color: green">
-    <h2>Slide 1</h2>
+  <ion-slide>
+  <div>
+		<ion-list>
+		  <button ion-item *ngFor="let item of lista_telefones" (click)="itemSelected(item.telefone)">
+			<strong>{{ item.nome }}</strong><br>
+			{{ item.telefone }}
+		  </button>  
+		</ion-list>
+  </div>
   </ion-slide>
 
-  <ion-slide style="background-color: blue">
-    <h2>Slide 2</h2>
+  <ion-slide>
+  <div>
+		<ion-list>
+		  <button ion-item *ngFor="let itemOp of lista_operadoras" (click)="itemSelected(itemOp.opnome)">
+			<strong>{{ itemOp.opnome }}</strong><br>
+			{{ itemOp.codigo }}<br>
+			{{ itemOp.categoria }}<br>
+			{{ itemOp.preco | currency }}
+		  </button>  
+		</ion-list>
+  </div>
   </ion-slide>
 
   <ion-slide style="background-color: red">
